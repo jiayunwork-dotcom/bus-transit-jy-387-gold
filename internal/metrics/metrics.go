@@ -21,7 +21,7 @@ type RouteMetric struct {
 // OnTimeRate returns the fraction of stops arriving within the threshold.
 func OnTimeRate(stops []parse.StopTime, thresholdMin int) float64 {
 	if len(stops) == 0 {
-		return 0.0
+		return 1.0
 	}
 	onTime := 0
 	for _, s := range stops {
